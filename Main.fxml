@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.shape.Line?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.HelloWorld">
+   <bottom>
+      <AnchorPane prefHeight="112.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <HBox layoutX="271.0" layoutY="35.0" prefHeight="62.0" prefWidth="314.0">
+               <children>
+                  <Label prefHeight="53.0" prefWidth="130.0" text="Already Guessed:">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="wrongGuess" layoutX="10.0" layoutY="10.0" prefHeight="62.0" prefWidth="174.0">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </HBox>
+            <HBox layoutX="14.0" layoutY="28.0" prefHeight="70.0" prefWidth="314.0" spacing="10.0">
+               <children>
+                  <Label prefHeight="45.0" prefWidth="130.0" text=" Enter one letter :">
+                     <font>
+                        <Font size="17.0" />
+                     </font>
+                  </Label>
+                  <TextArea fx:id="letEnter" prefHeight="38.0" prefWidth="88.0" promptText="Enter here" />
+                  <Line endX="100.0" startX="100.6928939819336" startY="47.29288864135742" />
+               </children>
+               <padding>
+                  <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+               </padding>
+            </HBox>
+         </children>
+      </AnchorPane>
+   </bottom>
+   <center>
+      <AnchorPane fx:id="anchorPane" prefHeight="200.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="playerProg" alignment="CENTER" layoutX="13.0" layoutY="262.0" prefHeight="56.0" prefWidth="574.0" text="_ _ _ _ _ _ _ _ " textAlignment="CENTER">
+               <font>
+                  <Font size="64.0" />
+               </font>
+            </Label>
+            <Button fx:id="enterButton" layoutX="24.0" layoutY="60.0" mnemonicParsing="false" prefHeight="244.0" prefWidth="52.0" text="Enter" />
+         </children></AnchorPane>
+   </center>
+   <top>
+      <AnchorPane prefHeight="29.0" prefWidth="600.0" BorderPane.alignment="CENTER">
+         <children>
+            <Label fx:id="tries" layoutX="56.0" layoutY="7.0" text="XGuess" />
+            <Label layoutX="14.0" layoutY="7.0" text="Tries:" />
+         </children>
+      </AnchorPane>
+   </top>
+</BorderPane>
